@@ -1,0 +1,153 @@
+/* Style for the top nav */
+.top-nav {
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the rest area */
+.rest-area {
+  display: flex;
+  flex-grow: 1;
+  height: calc(100vh - 50px);
+}
+
+/* Style for the left nav */
+.left-nav {
+  width: 70px;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the main area */
+.main-area {
+  flex-grow: 1;
+  background-color: #80808024;
+  padding-left: 10px;
+  /* display: flex;
+  justify-content: center; 
+  align-items: center; */
+}
+
+.grid-view {
+  width: 1366px;
+  min-height: 500px;
+  margin-top: 10px;
+  border-radius: 20px;
+  background-color: #f4f4f4;
+}
+.filter-area {
+  margin-top: 5px;
+  padding: 20px;
+}
+#search {
+  width: 300px;
+  height: 40px;
+  top: 21px;
+  left: 27px;
+  border-radius: 10px;
+  border: 2px;
+}
+
+#status {
+  width: 300px;
+  height: 40px;
+  top: 21px;
+  left: 27px;
+  border-radius: 10px;
+  border: 2px;
+  margin-left: 20px;
+}
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 10px;
+  min-width: 40px;
+  margin-top: 5px;
+}
+
+.input-field {
+  padding-left: 30px;
+  border: 1px solid;
+  background: white;
+}
+
+#export {
+  width: 213px;
+  height: 50px;
+  top: 21px;
+  left: 1119px;
+  border-radius: 50px;
+  background-color: #157afe;
+  margin-left: 70px;
+  color: white;
+}
+
+.table-area {
+  top: 10px;
+  padding: 20px;
+  background-color: white;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: none;
+}
+
+table td,
+#orders th {
+  padding: 8px;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #f2f2f2;
+  /* color: white; */
+}
+
+td:first-child,
+th:first-child {
+  border-radius: 10px 0 0 10px;
+  width: 35px;
+}
+td:last-child,
+th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+input[type="checkbox"] {
+  width:20px;
+  height: 20px;
+  border-radius: 35%;
+  vertical-align: middle;
+  border: 1px solid black;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  appearance: auto;
+  clip-path: circle(50% at 50% 50%);
+  background-color: blue;
+}

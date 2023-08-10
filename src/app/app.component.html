@@ -1,0 +1,60 @@
+<nav class="top-nav"></nav>
+<div class="rest-area">
+  <div class="left-nav"></div>
+  <div class="main-area">
+    <div class="grid-view">
+      <div class="filter-area">
+        <div class="input-icons">
+
+          <i class="fa fa-search icon"></i>
+          <input type="text" name="" class="input-field" id="search" #searchvalue placeholder="Search..." (input)="filter()"/>
+          
+          <i class="fa fa-tag icon" style="margin-left: 30px;"></i>
+          <select name="" id="" class="input-field" id="status" style="padding-left: 40px;" #status (change)="filter()">
+            <option value=null>Status</option>
+            <option *ngFor="let ele of allStatus" value="{{ele}}">{{ele}}</option>
+          </select>
+
+          <i class="fa fa-map-marker icon" style="margin-left: 30px;"></i>
+          <select name="" id="" class="input-field" id="status" style="padding-left: 40px;" #distribution (change)="filter()">
+            <option value=null>Distribution</option>
+            <option *ngFor="let ele of allDistribution" value="{{ele}}">{{ele}}</option>
+          </select>
+
+          <i class="fa fa-download icon" style="margin-left: 80px;color: white;margin-top: 5px;"></i>
+          <button id="export" (click)="downloadExcel()">Export orders</button>
+        </div>
+      </div>
+      <div class="table-area">
+        <div style="margin-bottom: 20px;">
+          <input type="checkbox" style="margin-left: 13px; margin-right: 22px;" (click)="selectAllRow($event)"> ALL ORDERS ({{this.selectedRows.length}} orders selected)
+        </div>
+
+        <table id="orders">
+          <tr>
+            <th></th>
+            <th>Ref. ID</th>
+            <th>Customer</th>
+            <th>Products</th>
+            <th>Date</th>
+            <th>Distribution</th>
+            <th>Status</th>
+            <th>Price (in Rs.)</th>
+          </tr>
+          <tr *ngFor="let ele of filteredData">
+            <td><input type="checkbox" (click)="selectRow(ele, $event)" [checked]="isAllSelected"></td>
+            <td>{{ele.refId}}</td>
+            <td>{{ele.customer}}</td>
+            <td>{{ele.products}}</td>
+            <td>{{ele.date}}</td>
+            <td>{{ele.distribution}}</td>
+            <td>{{ele.status}}</td>
+            <td>{{ele.price}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
